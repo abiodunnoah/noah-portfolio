@@ -26,6 +26,6 @@ a {
   color: inherit;
 }
 
-/* a:hover {
-  color: var(--accent);
-} */
+html {
+  scroll-behavior: smooth;
+}
