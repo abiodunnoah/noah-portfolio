@@ -1,44 +1,73 @@
-# noah-portfolio
+# Personal Portfolio Website
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern, responsive personal portfolio website built with **Vue 3** and **pure CSS**, showcasing my skills, projects, and contact information.
 
-## Recommended IDE Setup
+## 🚀 Live Demo
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+👉 https://noahportfolioo.netlify.app/
 
-## Recommended Browser Setup
+## 🛠️ Built With
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- Vue 3 (Composition API)
+- Pure CSS (Dark Theme)
+- Component-based architecture
 
-## Customize configuration
+## Features
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- Clean and modern dark UI
+- Reusable Vue components
+- Projects displayed using data-driven `v-for` rendering
+- Smooth scrolling navigation
+- Fully responsive layout
 
-## Project Setup
+## 🛠️ Tech Stack
 
-```sh
-npm install
+- **Framework**: [Vue 3](https://vuejs.org/) (Script Setup + Composition API)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: Custom CSS3 (Variables, Grid, Flexbox)
+- **State Management**: Local component state (Ref/Reactive)
+
+## 📂 Project Structure
+
+```bash
+src/
+├── assets/          # Static assets (CSS, Images)
+├── components/      # Vue components
+│   ├── AboutSection.vue
+│   ├── ContactSection.vue
+│   ├── HeroSection.vue
+│   ├── ProjectCard.vue
+│   ├── ProjectSection.vue
+│   └── SkillsSection.vue
+├── App.vue          # Main application component
+└── main.js          # Entry point
 ```
 
-### Compile and Hot-Reload for Development
+## 💻 Project Setup
 
-```sh
-npm run dev
-```
+1. **Install dependencies**:
 
-### Compile and Minify for Production
+   ```sh
+   npm install
+   ```
 
-```sh
-npm run build
-```
+2. **Run development server**:
 
-### Lint with [ESLint](https://eslint.org/)
+   ```sh
+   npm run dev
+   ```
 
-```sh
-npm run lint
-```
+3. **Build for production**:
+   ```sh
+   npm run build
+   ```
+
+## 📝 Customization
+
+- **Projects**: Edit `src/components/ProjectSection.vue` to update the projects list.
+- **Styles**: Global styles are in `src/assets/main.css`.
+- **Images**: Place project images in the `public/images/` directory.
+
+---
+
+© 2025 Noah. All rights reserved.
