@@ -16,7 +16,7 @@
       </div>
 
       <div class="skill-card">
-        <h3>Backend / Tools</h3>
+        <h3>Tools</h3>
 
         <ul>
           <li>Firebase Authentication</li>
