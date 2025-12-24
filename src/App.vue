@@ -1,4 +1,5 @@
 <script setup>
+import NavBar from './components/NavBar.vue'
 import HeroSection from './components/HeroSection.vue'
 import SkillsSection from './components/SkillsSection.vue'
 import ProjectSection from './components/ProjectSection.vue'
@@ -7,6 +8,7 @@ import ContactSection from './components/ContactSection.vue'
 </script>
 
 <template>
+  <NavBar />
   <main>
     <HeroSection />
     <SkillsSection />
@@ -17,17 +19,5 @@ import ContactSection from './components/ContactSection.vue'
 </template>
 
 <style scoped>
-body {
-  margin: 0;
-  font-family:
-    Avenir,
-    Helvetica,
-    Arial,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* Scoped styles if any specific to App.vue container */
 </style>

@@ -34,29 +34,25 @@ const projects = [
 
 <template>
   <section class="projects" id="projects">
-    <h2 class="section-title">Projects</h2>
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
 
-    <div class="projects-grid">
-      <ProjectCard v-for="project in projects" :key="project.title" v-bind="project" />
+      <div class="projects-grid">
+        <ProjectCard v-for="project in projects" :key="project.title" v-bind="project" />
+      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
 .projects {
-  padding: 4rem 2rem;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  padding: 6rem 0;
+  background: var(--bg-color); /* Match background for consistency */
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
 }
 </style>
