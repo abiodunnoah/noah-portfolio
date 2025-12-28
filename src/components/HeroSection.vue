@@ -43,7 +43,7 @@ h1 {
 }
 
 .gradient-text {
-  background: var(--gradient-text);
+  background: var(--primary);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

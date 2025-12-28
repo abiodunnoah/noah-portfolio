@@ -27,7 +27,7 @@ const scrollToSection = (id) => {
   <nav :class="['navbar', { scrolled: isScrolled }]">
     <div class="container nav-content">
       <div class="logo">
-        <span class="logo-text">Noah.dev</span>
+        <span class="logo-text">Ajao Noah</span>
       </div>
 
       <ul class="nav-links">
@@ -73,7 +73,7 @@ const scrollToSection = (id) => {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-primary);
-  background: var(--gradient-primary);
+  background: var(--primary);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

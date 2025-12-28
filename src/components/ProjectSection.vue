@@ -47,7 +47,7 @@ const projects = [
 <style scoped>
 .projects {
   padding: 6rem 0;
-  background: var(--bg-color); /* Match background for consistency */
+  background: var(--bg-color);
 }
 
 .projects-grid {
