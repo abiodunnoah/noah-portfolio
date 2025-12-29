@@ -13,7 +13,9 @@
 
       <div class="buttons">
         <a href="#projects" class="btn primary">View Projects</a>
-        <a href="/cv.pdf" class="btn secondary" target="_blank">Download CV</a>
+        <a href="/Ajao Abiodun N. - Resume.pdf" class="btn secondary" target="_blank"
+          >Download CV</a
+        >
       </div>
     </div>
   </section>
