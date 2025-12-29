@@ -27,13 +27,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6rem 2rem 4rem; /* Top padding for navbar */
+  padding: 6rem 2rem 4rem;
   text-align: center;
 }
 
 .hero-content {
   max-width: 800px;
-  animation: fadeIn 1s ease-out;
+  animation: fadeIn 1.5s ease-out;
 }
 
 h1 {

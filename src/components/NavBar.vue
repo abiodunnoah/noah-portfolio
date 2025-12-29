@@ -34,6 +34,7 @@ const scrollToSection = (id) => {
         <li><a href="#hero" @click.prevent="scrollToSection('hero')">Home</a></li>
         <li><a href="#skills" @click.prevent="scrollToSection('skills')">Skills</a></li>
         <li><a href="#projects" @click.prevent="scrollToSection('projects')">Projects</a></li>
+        <li><a href="#about" @click.prevent="scrollToSection('about')">About</a></li>
         <li><a href="#contact" @click.prevent="scrollToSection('contact')">Contact</a></li>
       </ul>
     </div>
