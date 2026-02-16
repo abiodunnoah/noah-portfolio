@@ -17,7 +17,3 @@ import ContactSection from './components/ContactSection.vue'
     <ContactSection />
   </main>
 </template>
-
-<style scoped>
-/* Scoped styles if any specific to App.vue container */
-</style>
