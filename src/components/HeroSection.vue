@@ -2,8 +2,8 @@
 
 <template>
   <section id="hero" class="hero">
-    <div class="hero-content">
-      <h1>Hi, I'm <span class="gradient-text">Noah</span> 👋</h1>
+    <div class="hero-content reveal revealed">
+      <h1>Hi, I'm <span class="gradient-text">Noah</span></h1>
       <h2>Frontend Developer</h2>
 
       <p>
@@ -13,7 +13,9 @@
 
       <div class="buttons">
         <a href="#projects" class="btn primary">View Projects</a>
-        <a href="/Ajao Abiodun N. - CV.pdf" class="btn secondary" target="_blank">Download CV</a>
+        <a href="/Ajao%20Abiodun%20N.%20-%20Resume.pdf" class="btn secondary" target="_blank"
+          >Download Resume</a
+        >
       </div>
     </div>
   </section>
@@ -31,7 +33,6 @@
 
 .hero-content {
   max-width: 800px;
-  animation: fadeIn 1.5s ease-out;
 }
 
 h1 {
@@ -43,7 +44,7 @@ h1 {
 }
 
 .gradient-text {
-  background: var(--primary);
+  background: var(--gradient-text);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -92,17 +93,6 @@ p {
 .btn.secondary:hover {
   background: rgba(99, 102, 241, 0.1);
   transform: translateY(-2px);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (max-width: 768px) {

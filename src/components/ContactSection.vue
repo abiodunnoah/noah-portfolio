@@ -1,14 +1,43 @@
+<script setup>
+import { ref } from 'vue'
+
+const submitted = ref(false)
+const error = ref('')
+
+const handleSubmit = async (e) => {
+  error.value = ''
+  const form = e.target
+  const data = new FormData(form)
+
+  try {
+    const res = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString(),
+    })
+    if (res.ok) {
+      submitted.value = true
+    } else {
+      error.value = 'Something went wrong. Try again later.'
+    }
+  } catch {
+    error.value = 'Something went wrong. Try again later.'
+  }
+}
+</script>
+
 <template>
   <section id="contact" class="contact">
     <div class="container">
       <div class="contact-content">
-        <h2 class="section-title">Get In Touch</h2>
-        <p>
+        <h2 class="section-title reveal">Get In Touch</h2>
+
+        <p class="contact-message reveal reveal-delay-1">
           I'm currently open to new opportunities. Whether you have a question or just want to say
           hi, I'll try my best to get back to you!
         </p>
 
-        <div class="contact-info">
+        <div class="contact-info reveal reveal-delay-2">
           <div class="contact-item">
             <div class="icon-box">
               <svg
@@ -110,11 +139,53 @@
           </div>
         </div>
 
-        <div class="contact-links">
-          <a href="mailto:ajaoolasco@gmail.com" class="btn primary"> Send an Email </a>
-          <a href="https://github.com/abiodunnoah" target="_blank" class="btn secondary">
-            GitHub Profile
-          </a>
+        <!-- Netlify contact form -->
+        <form
+          v-if="!submitted"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="contact-form reveal reveal-delay-3"
+          @submit.prevent="handleSubmit"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="What's on your mind?"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn primary submit-btn">Send Message</button>
+          <p v-if="error" class="form-error">{{ error }}</p>
+        </form>
+
+        <p v-else class="thanks reveal">Thanks for reaching out! I'll get back to you soon.</p>
+
+        <div class="contact-links reveal">
+          <a href="mailto:ajaoolasco@gmail.com" class="btn primary">Send an Email</a>
+          <a href="https://github.com/abiodunnoah" target="_blank" class="btn secondary"
+            >GitHub Profile</a
+          >
         </div>
       </div>
     </div>
@@ -133,17 +204,17 @@
   margin: 0 auto;
 }
 
-p {
+.contact-message {
   color: var(--text-secondary);
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Contact Info Grid */
+/* ─── Contact Info Grid ─── */
 .contact-info {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -198,6 +269,72 @@ p {
   color: var(--primary);
 }
 
+/* ─── Contact Form ─── */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+.form-error {
+  color: #f87171;
+  font-size: 0.9rem;
+}
+
+.thanks {
+  font-size: 1.3rem;
+  color: var(--text-accent);
+  margin: 3rem 0;
+}
+
+.submit-btn {
+  align-self: flex-start;
+}
+
+/* ─── Bottom links ─── */
 .contact-links {
   display: flex;
   justify-content: center;
@@ -239,6 +376,11 @@ p {
 
   .btn {
     width: 100%;
+    text-align: center;
+  }
+
+  .submit-btn {
+    align-self: stretch;
     text-align: center;
   }
 }

@@ -1,10 +1,10 @@
 <template>
   <section id="skills" class="skills">
     <div class="container">
-      <h2 class="section-title">Skills & Tech</h2>
+      <h2 class="section-title reveal">Skills & Tech</h2>
 
       <div class="skills-grid">
-        <div class="skills-category">
+        <div class="skills-category reveal reveal-delay-1">
           <h3>Frontend</h3>
           <div class="skill-tags">
             <span class="skill-tag">Vue 3</span>
@@ -16,7 +16,7 @@
           </div>
         </div>
 
-        <div class="skills-category">
+        <div class="skills-category reveal reveal-delay-2">
           <h3>Backend & Tools</h3>
           <div class="skill-tags">
             <span class="skill-tag">Firebase Auth</span>
@@ -27,7 +27,7 @@
           </div>
         </div>
 
-        <div class="skills-category">
+        <div class="skills-category reveal reveal-delay-3">
           <h3>Workflow</h3>
           <div class="skill-tags">
             <span class="skill-tag">Responsive Design</span>

@@ -1,6 +1,10 @@
-This favicon was generated using the following font:
+I'm Noah — a frontend developer based in Ibadan, Nigeria, with a thing for clean interfaces
+and Vue 3. I build stuff that actually works.
 
-- Font Title: Montserrat Underline
-- Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/montserratunderline/v2/mFTdWaYfw6zH4dthXcyms01NtC8I_7U5uS4r1ozd9EzeaWZskmtK_bzbXn52M1Mi.ttf
-- Font License: undefined)
+Before I got into development, I worked admin and remote support roles. Those taught me
+how to communicate clearly, pay attention to the small stuff, and stay organized when
+things get messy — skills that carry right over into writing components and wrangling
+Firebase.
+
+Outside of coding, I'm probably reading about design systems, trying to improve my
+typing speed, or finding a new genre of music to fixate on for the month.

@@ -1,73 +1,70 @@
 # Personal Portfolio Website
 
-A modern, responsive personal portfolio website built with **Vue 3** and **pure CSS**, showcasing my skills, projects, and contact information.
+A modern, responsive portfolio built with **Vue 3** and **pure CSS** — showcasing skills, projects, and contact info.
 
-## 🚀 Live Demo
+## Live Demo
 
 👉 https://noahportfolioo.netlify.app/
 
-## 🛠️ Built With
+## Built With
 
-- Vue 3 (Composition API)
-- Pure CSS (Dark Theme)
-- Component-based architecture
+- Vue 3 (Composition API, `<script setup>`)
+- Pure CSS (custom properties, dark theme, Grid/Flexbox)
+- Intersection Observer for scroll-triggered reveals
+- Netlify Forms for the contact form
 
 ## Features
 
-- Clean and modern dark UI
-- Reusable Vue components
-- Projects displayed using data-driven `v-for` rendering
-- Smooth scrolling navigation
-- Fully responsive layout
+- Clean dark UI with subtle grain texture
+- Scroll-triggered reveal animations (no library)
+- Data-driven project cards (`v-for`)
+- Smooth-scroll navigation with underline hover
+- Mobile hamburger menu with animated toggle
+- Back-to-top button that appears on scroll
+- Netlify contact form (name, email, message)
+- Responsive at all breakpoints
+- Semantic HTML with ARIA labels and focus-visible rings
 
-## 🛠️ Tech Stack
+## Project Structure
 
-- **Framework**: [Vue 3](https://vuejs.org/) (Script Setup + Composition API)
-- **Build Tool**: [Vite](https://vitejs.dev/)
-- **Styling**: Custom CSS3 (Variables, Grid, Flexbox)
-- **State Management**: Local component state (Ref/Reactive)
-
-## 📂 Project Structure
-
-```bash
+```
 src/
-├── assets/          # Static assets (CSS, Images)
-├── components/      # Vue components
-│   ├── AboutSection.vue
-│   ├── ContactSection.vue
-│   ├── HeroSection.vue
-│   ├── ProjectCard.vue
-│   ├── ProjectSection.vue
-│   └── SkillsSection.vue
-├── App.vue          # Main application component
-└── main.js          # Entry point
+├── assets/
+│   └── main.css              # global styles, CSS custom properties
+├── components/
+│   ├── NavBar.vue             # fixed nav + mobile hamburger menu
+│   ├── HeroSection.vue        # hero with CTA buttons
+│   ├── SkillsSection.vue      # skills grid (3 categories)
+│   ├── ProjectSection.vue     # data-driven project listing
+│   ├── ProjectCard.vue        # reusable project card
+│   ├── AboutSection.vue       # personal bio
+│   ├── ContactSection.vue     # contact info + Netlify form
+│   └── FooterSection.vue      # social links + copyright
+├── composables/
+│   └── useRevealOnScroll.js   # Intersection Observer wrapper
+├── App.vue                    # root — wires sections, back-to-top
+└── main.js                    # entry point
 ```
 
-## 💻 Project Setup
+## Getting Started
 
-1. **Install dependencies**:
+```sh
+npm install
+npm run dev      # dev server (hot reload)
+npm run build    # production build → dist/
+npm run preview  # preview production build
+npm run lint     # ESLint flat config (fix + cache)
+npm run format   # Prettier on src/
+```
 
-   ```sh
-   npm install
-   ```
+## Customization
 
-2. **Run development server**:
-
-   ```sh
-   npm run dev
-   ```
-
-3. **Build for production**:
-   ```sh
-   npm run build
-   ```
-
-## 📝 Customization
-
-- **Projects**: Edit `src/components/ProjectSection.vue` to update the projects list.
-- **Styles**: Global styles are in `src/assets/main.css`.
-- **Images**: Place project images in the `public/images/` directory.
+- **Projects**: edit the array in `src/components/ProjectSection.vue`
+- **About text**: edit `src/components/AboutSection.vue` or `public/about.txt`
+- **Styles**: global tokens in `src/assets/main.css`, scoped styles per component
+- **Images**: place project screenshots in `public/images/`
+- **Resume PDF**: replace `public/Ajao Abiodun N. - Resume.pdf`
 
 ---
 
-© 2025 Noah. All rights reserved.
+&copy; 2026 Noah. All rights reserved.

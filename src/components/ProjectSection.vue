@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'Movie Discovery App',
     description:
-      'A movie discovery app that allows users to browse movies, view details, and save favorites using Firebase authentication.',
+      'A movie discovery app that lets users browse movies, view details, and save favorites using Firebase authentication.',
     tech: ['Vue 3', 'Pinia', 'Firebase', 'API'],
     liveLink: 'https://moviesdiscoveryapp.netlify.app/',
     codeLink: 'https://github.com/abiodunnoah/movie-discovery-app',
@@ -23,7 +23,7 @@ const projects = [
   {
     title: 'Weather App',
     description:
-      'A clean weather app that fetches real-time weather data using a public API with Vue Suspense and watchers.',
+      'A clean weather app that fetches real-time data using a public API with Vue Suspense and watchers.',
     tech: ['Vue 3', 'API', 'Suspense'],
     liveLink: 'https://weatherr-check-app.netlify.app/',
     codeLink: 'https://github.com/abiodunnoah/weather-app',
@@ -35,10 +35,15 @@ const projects = [
 <template>
   <section class="projects" id="projects">
     <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
+      <h2 class="section-title reveal">Featured Projects</h2>
 
       <div class="projects-grid">
-        <ProjectCard v-for="project in projects" :key="project.title" v-bind="project" />
+        <ProjectCard
+          v-for="(project, i) in projects"
+          :key="project.title"
+          v-bind="project"
+          :class="`reveal reveal-delay-${i + 1}`"
+        />
       </div>
     </div>
   </section>

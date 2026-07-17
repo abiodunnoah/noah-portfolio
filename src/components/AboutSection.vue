@@ -2,18 +2,23 @@
   <section id="about" class="about">
     <div class="container">
       <div class="about-content">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title reveal">About Me</h2>
 
-        <p class="lead">
-          I’m Noah, a frontend developer based in Nigeria with experience building modern web
-          applications using Vue.js, Pinia, and Firebase.
+        <p class="lead reveal reveal-delay-1">
+          I'm Noah — a frontend developer based in Ibadan, Nigeria, with a thing for clean
+          interfaces and Vue 3. I build stuff that actually works.
         </p>
 
-        <p>
-          I enjoy turning ideas into clean, functional user interfaces and working on projects that
-          solve real problems. Before transitioning fully into software development, I worked in
-          administrative and remote support roles, which helped me develop strong attention to
-          detail, communication skills, and a structured approach to work.
+        <p class="reveal reveal-delay-2">
+          Before I got into development, I worked admin and remote support roles. Those taught me
+          how to communicate clearly, pay attention to the small stuff, and stay organized when
+          things get messy — skills that carry right over into writing components and wrangling
+          Firebase.
+        </p>
+
+        <p class="reveal reveal-delay-3">
+          Outside of coding, I'm probably reading about design systems, trying to improve my typing
+          speed, or finding a new genre of music to fixate on for the month.
         </p>
       </div>
     </div>
